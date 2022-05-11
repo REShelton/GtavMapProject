@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>PAFB Information</title>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+    <style>
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+
+    <script>
+        // Initialize the map
+        var map = L.map("map", { crs: L.CRS.Simple });
+
+        // Load a tile layer
+        var bounds = [[0, 0],[2000, 2000],];
+        var image = L.imageOverlay("gtavmap.png", bounds).addTo(map);
+
+        map.fitBounds(bounds);
+
+        // Markers
+        var sol = L.latLng([700, 900]);
+
+        L.marker(sol).addTo(map);
+      
+        // Default view of map
+        map.setView([400, 950], 0);
+    </script>
+</body>
+
+</html>
