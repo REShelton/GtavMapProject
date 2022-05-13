@@ -12,14 +12,32 @@
    <script src="./js/Control.Coordinates.js"></script>
    <script src="./js/leaflet-color-markers.js"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+
+        body {
+            background: #0fa8d230;
+        }
+
+        h1{
+            font-family: 'Playball', cursive;
+            text-align: center;
+        }
+
         #map {
-            width: 98.5vw;
-            height: 98.5vh;
+            width: 56vw;
+            height: 93vh;
+            background: #0fa8d2;
+            border: 5px solid black;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0%;
+
         }
     </style>
 </head>
 
 <body>
+    <h1>Welcome to the PAFB Map Project!</h1>
     <div id="map"></div>
 
     <script>
@@ -32,7 +50,7 @@
 
         // Default view of map
         map.fitBounds(bounds);
-        //map.setView([400, 950], 4);
+        map.setView([3650, 4096], -3);
 
         // USB Images
         var usbImg1 = '<img src="./img/usbimg1.png" height ="750px" width="auto"/>';
@@ -53,15 +71,15 @@
         var tooltip5 = L.tooltip().setContent("USB Photo 2 - Click Marker");
 
         // Define Popup Content
-        var popup1 = L.popup().setContent(usbImg1);
-        var popup2 = L.popup().setContent(usbImg2);
+        var popup1 = L.popup({minWidth: 1125}).setContent(usbImg1);
+        var popup2 = L.popup({minWidth: 1220}).setContent(usbImg2);
 
         // Add Markers to map
-        L.marker(contentMarker1, {icon: redIcon}).addTo(map).bindTooltip(tooltip1);
-        L.marker(contentMarker2, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip2);
-        L.marker(contentMarker3, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip3);
-        L.marker(contentMarker4, {icon: blackIcon}).addTo(map).bindTooltip(tooltip4).bindPopup(popup1);
-        L.marker(contentMarker5, {icon: blackIcon}).addTo(map).bindTooltip(tooltip5).bindPopup(popup2);
+        L.marker(contentMarker1, {icon: redIcon}).addTo(map).bindTooltip(tooltip1).on('click', function(e){map.setView(e.latlng, 0);});
+        L.marker(contentMarker2, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip2).on('click', function(e){map.setView(e.latlng, 0);});
+        L.marker(contentMarker3, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip3).on('click', function(e){map.setView(e.latlng, 0);});
+        L.marker(contentMarker4, {icon: blackIcon}).addTo(map).bindTooltip(tooltip4).bindPopup(popup1).on('click', function(e){map.setView(e.latlng, 0);});
+        L.marker(contentMarker5, {icon: blackIcon}).addTo(map).bindTooltip(tooltip5).bindPopup(popup2).on('click', function(e){map.setView(e.latlng, 0);});
 
         // Coord Function
         var c = new L.Control.Coordinates();
