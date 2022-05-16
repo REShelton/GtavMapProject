@@ -1,20 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Playball&display=swap'); /* "Playball" font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap'); /* "Itim" font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Itim&display=swap'); /* "Gruppo" font from Google */
 
 body {
-    background: #0fa8d230;
+    background: #353434;
 }
 
-h1{
-    font-family: 'Playball', cursive;
+h1 {
+    font-family: 'Gruppo';
     text-align: center;
+    font-size: 60px;
+    color: #a94295;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 5px 0px;
+}
+h2 {
+    font-family: 'Gruppo';
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    color: #a94295;
+}
+
+a {
+    color: #a94295;
+    text-decoration: none;
+}
+
+.backlink {
+    text-align: left;
+    float: left;
+    padding-right: 25px;
 }
 
 #map {
-    width: 56vw;
+    width: 83vw;
     height: 93vh;
     background: #0fa8d2;
-    border: 5px solid black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0%;
+    border: 5px solid #a94295;
+}
+
+.revivalrplogo {
+    height: auto;
+    width: 60%;
+    border-radius: 50%;
+    border: 5px solid #a94295;
+}
+
+.serverlist {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.caption {
+    display: block;
+    font-family: 'Gruppo', Arial;
+    font-size: 30px;
+    font-weight: bold;
 }

@@ -3,15 +3,15 @@ var map = L.map("map", { crs: L.CRS.Simple, minZoom: -2.50001 });
 
 // Load a tile layer
 var bounds = [[0, 0],[8192, 8192]];
-var image = L.imageOverlay("./img/gtavmap.png", bounds).addTo(map);
+var image = L.imageOverlay("../img/gtavmap.png", bounds).addTo(map);
 
 // Default view of map
 map.fitBounds(bounds);
 map.setView([3650, 4096], -3);
 
 // USB Images
-var usbImg1 = '<img src="./img/usbimg1.png" height ="750px" width="auto"/>';
-var usbImg2 = '<img src="./img/usbimg2.png" height ="750px" width="auto"/>';
+var usbImg1 = '<img src="../img/usbimg1.png" style="height: auto; max-width: 60vw"/>';
+var usbImg2 = '<img src="../img/usbimg2.png" style="height: auto; max-width: 60vw";/>';
 
 // Define Markers as variables
 var contentMarker1 = L.latLng([2036.6199, 4232.4039]); // Serial Number Scratch
@@ -28,8 +28,8 @@ var tooltip4 = L.tooltip().setContent("USB Photo 1 - Click Marker");
 var tooltip5 = L.tooltip().setContent("USB Photo 2 - Click Marker");
 
 // Define Popup Content
-var popup1 = L.popup({minWidth: 1125}).setContent(usbImg1);
-var popup2 = L.popup({minWidth: 1220}).setContent(usbImg2);
+var popup1 = L.popup({maxWidth: "auto"}).setContent(usbImg1);
+var popup2 = L.popup({maxWidth: "auto"}).setContent(usbImg2);
 
 // Add Markers to map
 L.marker(contentMarker1, {icon: redIcon}).addTo(map).bindTooltip(tooltip1).on('click', function(e){map.setView(e.latlng, 0);});
