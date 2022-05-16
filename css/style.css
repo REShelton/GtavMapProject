@@ -33,6 +33,11 @@ a {
     padding-right: 25px;
 }
 
+.welcome {
+    display: flex;
+    justify-content: center;
+}
+
 #map {
     width: 83vw;
     height: 93vh;
