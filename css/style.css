@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap'); /* "Playball" font from Google */
-@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap'); /* "Itim" font from Google */
-@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Itim&display=swap'); /* "Gruppo" font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
+/* "Playball" font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+/* "Itim" font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&family=Itim&display=swap');
+/* "Gruppo" font from Google */
 
 body {
     background: #353434;
@@ -14,6 +17,7 @@ h1 {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 5px 0px;
 }
+
 h2 {
     font-family: 'Gruppo';
     text-align: center;
