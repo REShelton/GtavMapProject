@@ -2,7 +2,7 @@
 var map = L.map("map", { crs: L.CRS.Simple, minZoom: -2.50001 });
 
 // Load a tile layer
-var bounds = [[0, 0],[8192, 8192]];
+var bounds = [[0, 0], [8192, 8192]];
 var image = L.imageOverlay("../img/gtavmap.png", bounds).addTo(map);
 
 // Default view of map
@@ -31,23 +31,23 @@ var tooltip5 = L.tooltip().setContent("USB Photo 2 - Click Marker");
 var tooltip6 = L.tooltip().setContent("USB Photo 3 - Click Marker");
 
 // Define Popup Content
-var popup1 = L.popup({maxWidth: "auto"}).setContent(usbImg1);
-var popup2 = L.popup({maxWidth: "auto"}).setContent(usbImg2);
-var popup3 = L.popup({maxWidth: "auto"}).setContent(usbImg3);
+var popup1 = L.popup({ maxWidth: "auto" }).setContent(usbImg1);
+var popup2 = L.popup({ maxWidth: "auto" }).setContent(usbImg2);
+var popup3 = L.popup({ maxWidth: "auto" }).setContent(usbImg3);
 
 // Add Markers to map
-L.marker(contentMarker1, {icon: redIcon}).addTo(map).bindTooltip(tooltip1).on('click', function(e){map.setView(e.latlng, 0);});
-L.marker(contentMarker2, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip2).on('click', function(e){map.setView(e.latlng, 0);});
-L.marker(contentMarker3, {icon: orangeIcon}).addTo(map).bindTooltip(tooltip3).on('click', function(e){map.setView(e.latlng, 0);});
-L.marker(contentMarker4, {icon: blackIcon}).addTo(map).bindTooltip(tooltip4).bindPopup(popup1).on('click', function(e){map.setView(e.latlng, 0);});
-L.marker(contentMarker5, {icon: blackIcon}).addTo(map).bindTooltip(tooltip5).bindPopup(popup2).on('click', function(e){map.setView(e.latlng, 0);});
-L.marker(contentMarker6, {icon: blackIcon}).addTo(map).bindTooltip(tooltip6).bindPopup(popup3).on('click', function(e){map.setView(e.latlng, 0);});
+L.marker(contentMarker1, { icon: redIcon }).addTo(map).bindTooltip(tooltip1).on('click', function (e) { map.setView(e.latlng, 0); });
+L.marker(contentMarker2, { icon: orangeIcon }).addTo(map).bindTooltip(tooltip2).on('click', function (e) { map.setView(e.latlng, 0); });
+L.marker(contentMarker3, { icon: orangeIcon }).addTo(map).bindTooltip(tooltip3).on('click', function (e) { map.setView(e.latlng, 0); });
+L.marker(contentMarker4, { icon: blackIcon }).addTo(map).bindTooltip(tooltip4).bindPopup(popup1).on('click', function (e) { map.setView(e.latlng, 0); });
+L.marker(contentMarker5, { icon: blackIcon }).addTo(map).bindTooltip(tooltip5).bindPopup(popup2).on('click', function (e) { map.setView(e.latlng, 0); });
+L.marker(contentMarker6, { icon: blackIcon }).addTo(map).bindTooltip(tooltip6).bindPopup(popup3).on('click', function (e) { map.setView(e.latlng, 0); });
 
 // Coord Function
 var c = new L.Control.Coordinates();
 
 c.addTo(map);
 
-map.on('click', function(e) {
-c.setCoordinates(e);
+map.on('click', function (e) {
+    c.setCoordinates(e);
 });
