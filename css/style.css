@@ -13,7 +13,7 @@ h1 {
     font-family: 'Gruppo';
     text-align: center;
     font-size: 60px;
-    color: #a94295;
+    color: #0064ff;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 5px 0px;
 }
@@ -23,11 +23,11 @@ h2 {
     text-align: center;
     font-size: 40px;
     text-decoration: underline;
-    color: #a94295;
+    color: #004bbc;
 }
 
 a {
-    color: #a94295;
+    color: #004bbc;
     text-decoration: none;
 }
 
@@ -46,14 +46,14 @@ a {
     width: 83vw;
     height: 93vh;
     background: #0fa8d2;
-    border: 5px solid #a94295;
+    border: 5px solid #004bbc;
 }
 
-.revivalrplogo {
+.atwurplogo {
     height: auto;
     width: 60%;
     border-radius: 50%;
-    border: 5px solid #a94295;
+    border: 5px solid #004bbc;
 }
 
 .serverlist {
