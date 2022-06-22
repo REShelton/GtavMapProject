@@ -23,11 +23,11 @@ h2 {
     text-align: center;
     font-size: 40px;
     text-decoration: underline;
-    color: #004bbc;
+    color: #0064ff;
 }
 
 a {
-    color: #004bbc;
+    color: #0064ff;
     text-decoration: none;
 }
 
@@ -46,14 +46,14 @@ a {
     width: 83vw;
     height: 93vh;
     background: #0fa8d2;
-    border: 5px solid #004bbc;
+    border: 5px solid #0064ff;
 }
 
 .atwurplogo {
     height: auto;
     width: 60%;
     border-radius: 50%;
-    border: 5px solid #004bbc;
+    border: 5px solid #0064ff;
 }
 
 .serverlist {
