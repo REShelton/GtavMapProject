@@ -51,7 +51,7 @@ a {
 
 .atwurplogo {
     height: auto;
-    width: 60%;
+    max-width: 60%;
     border-radius: 50%;
     border: 5px solid #0064ff;
 }
@@ -68,4 +68,13 @@ a {
     font-family: 'Gruppo', Arial;
     font-size: 30px;
     font-weight: bold;
+}
+
+.unknownDemonsLogo {
+    height: auto;
+    max-width: 20%;
+   display: block;
+   margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
